@@ -1,11 +1,18 @@
 # jiandan.net/xxooo crawler
 
-# [Obsoleting]
+Crawler for jiandan.net/xxoo girl's pics. Friendly and for fun.
 
-Thx 4 the jiandan developer.
+煎蛋妹子图爬虫。友好地单线程和请求延迟。项目只是为了好玩。
 
-This project for jiandan.net/xxoo pics is out-of-style.
+## usage
 
-# [废弃项目]
+For: **python 2**
 
-新代码已经可以运作，不放出了。可以提供妹子图的图包。
+Type this command in shell to install **selenium**:
+
+    pip install selenium
+
+Otherwise, you need install basic tools:
+> Chrome
+> 
+> chromedriver.exe
