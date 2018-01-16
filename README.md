@@ -4,9 +4,13 @@ Crawler for jiandan.net/xxoo girl's pics. Friendly and for fun.
 
 煎蛋妹子图爬虫。友好地单线程和请求延迟。项目只是为了好玩。
 
+依赖selenium。
+
+因为网站脚本会隐藏差评图片，目前爬取的不包含被折叠的内容。
+
 ## Usage
 
-For: **python 2**
+Work with: **python 2**
 
 Type this command in shell to install **selenium**:
 
@@ -21,4 +25,6 @@ Otherwise, you need to install basic tools:
 
 ## By the way
 
-The jiandan.net/xxooo web server could check **User-Agent** in your request header, but it only checks whether it has User-Agent tag or not.
+The jiandan.net/xxooo web server could check **User-Agent** in your request header, but it only checks whether it has the tag or not.
+
+Owing to the script automatically can hide bad content, pics you get are not whole.
