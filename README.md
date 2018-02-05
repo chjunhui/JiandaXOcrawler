@@ -6,7 +6,7 @@ Crawler for jiandan.net/xxoo girl's pics. Friendly and for fun.
 
 依赖selenium。
 
-因为网站脚本会隐藏差评图片，目前爬取的不包含被折叠的内容。
+2月5日更新之后默认爬取所有图片，包括折叠内容。
 
 ## Usage
 
