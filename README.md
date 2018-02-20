@@ -1,4 +1,4 @@
-# jiandan.net/xxooo crawler
+# jiandan.net/xxoo crawler
 
 Crawler for jiandan.net/xxoo girl's pics. Friendly and for fun.
 

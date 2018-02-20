@@ -21,16 +21,16 @@ try:
     cou = re.findall('[0-9]{1,4}', counts)
     cou = int(cou[0])
     for i in range(1, cou+1): #start-page to end-page
-        url = 'http://jandan.net/ooxx/page-'+str(i)+'#comments'
+        url = 'http://jandan.net/ooxx/page-' + str(i) + '#comments'
         driver.get(url)
         page = driver.find_element_by_id('comments').get_attribute("innerHTML")
-        pic = re.findall('(src=".*?jpg|src=".*?gif|src=".*?png)',page)
+        pic = re.findall('(src=".*?jpg|src=".*?gif|src=".*?png)', page)
         print i
         for j in pic:
             url = re.sub('cn/.*?/', 'cn/large/', j[5:])
             print url
             r = requests.get(url)
-            name1 = re.findall('([a-zA-Z0-9]*?.jpg|[a-zA-Z0-9]*?.gif|[a-zA-Z0-9]*?.png)',j[-36:])
+            name1 = re.findall('([a-zA-Z0-9]*?.jpg|[a-zA-Z0-9]*?.gif|[a-zA-Z0-9]*?.png)', j[-36:])
             with open('./pics/'+name1[0], "wb") as code:
                 try:
                     code.write(r.content)
