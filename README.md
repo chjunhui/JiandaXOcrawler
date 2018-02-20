@@ -4,15 +4,21 @@ Crawler for jiandan.net/xxoo girl's pics. Friendly and for fun.
 
 煎蛋妹子图爬虫。友好地单线程和请求延迟。项目只是为了好玩。
 
-依赖selenium。
+下载后，安装依赖模块，运行即可。
+
+随缘Watch、Star。
 
 ## Usage
 
 Work with: **python 2**
 
+python2代码
+
 rely on **selenium**、**requests**
 
-Type this command in shell to install **selenium**:
+依赖**selenium**、**requests**。
+
+Install dependent modules:
 
     pip install selenium
 	pip install requests
