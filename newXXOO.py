@@ -12,7 +12,7 @@ reload(sys)
 sys.setdefaultencoding('utf-8')
 headers = {"User-Agent":"Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36"}
 url = 'http://jandan.net/ooxx'
-driver = webdriver.Chrome()
+driver = webdriver.PhantomJS()
 try:
     driver.get(url)
     time.sleep(2)
@@ -27,7 +27,7 @@ try:
         pic = re.findall('(src=".*?jpg|src=".*?gif|src=".*?png)',page)
         print i
         for j in pic:
-            url = re.sub('cn/.*?/', 'cn/large/', j[5:])  
+            url = re.sub('cn/.*?/', 'cn/large/', j[5:])
             print url
             r = requests.get(url)
             name1 = re.findall('([a-zA-Z0-9]*?.jpg|[a-zA-Z0-9]*?.gif|[a-zA-Z0-9]*?.png)',j[-36:])
