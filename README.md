@@ -10,9 +10,8 @@ Crawler for jiandan.net/xxoo girl's pics. Friendly and for fun.
 
 ## Usage
 
-Work with: **python 2**
 
-python2代码
+![work with](https://img.shields.io/badge/python-2.X-green.svg)
 
 rely on **selenium**、**requests**
 
