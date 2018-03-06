@@ -1,6 +1,6 @@
 # jiandan.net/xxoo crawler
 
-![work with](https://img.shields.io/badge/python-2.X-orange.svg)
+![work with](https://img.shields.io/badge/python-2.X-red.svg)
 ![work with](https://img.shields.io/badge/python-3.X-green.svg)
 
 Crawler for jiandan.net/xxoo girl's pics. Friendly and for fun.
@@ -43,8 +43,8 @@ If you use py3, you need to install additional tools:
 
 The **py3-script** uses a Headless Chrome method, so type `chrome://version/` in address bar and check Chrome version. Make sure your Chrome browser version:
 
-    Windows >= 60.x
-    Linux >= 59.x
+    Chrome(Windows) >= 60.x
+    Chrome(Linux) >= 59.x
 
 ## By the way
 
@@ -62,6 +62,6 @@ The jiandan.net/xxooo web server could check **User-Agent** in your request head
 
 2/20：The Web browser had changed from chrome to phantomJS and added it in the project. Improved performance.
 
-3月6日：添加python3代码，python2不再更新；python3使用Headless Chrome;python3代码中调整采集策略;细节修改。
+3月6日：添加python3代码，python2不再更新；python3使用Headless Chrome；python3代码中调整采集策略；细节修改。
 
 3/6: Added python3 code, python2 code would not upgrade anymore; Used the Headless Chrome replace phantomJS in python3 code; Changed crawling strategy in python3 code; Some details modified.
