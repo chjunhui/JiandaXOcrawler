@@ -33,9 +33,11 @@ If you use py2: just run `XXOO2.py` in `./old/`.
 If you use py3, you need to install additional tools:
 > Chrome
 > 
-> chromedriver.exe
+> [chromedriver.exe](http://chromedriver.storage.googleapis.com/)
 
-Waring:
+[chromedriver mirror in Alibaba](http://npm.taobao.org/mirrors/chromedriver/)
+
+**Waring**:
 
 **chromedriver.exe** need you to add it in `SYSTEM PATH`. If you have installed it successfully, you are able to run it in shell or cmd.
 
@@ -62,4 +64,4 @@ The jiandan.net/xxooo web server could check **User-Agent** in your request head
 
 3月6日：添加python3代码，python2不再更新；python3使用Headless Chrome;python3代码中调整采集策略;细节修改。
 
-3/6: Added python3 code, python2 code would not upgrade; Used the Headless Chrome replace phantomJS in python3; Changed crawling strategy in python3 code; Some details modified.
+3/6: Added python3 code, python2 code would not upgrade anymore; Used the Headless Chrome replace phantomJS in python3 code; Changed crawling strategy in python3 code; Some details modified.

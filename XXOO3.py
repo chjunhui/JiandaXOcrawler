@@ -25,7 +25,7 @@ def crawlurl():
         counts = re.findall('current-comment-page">.*</s', page)[0]
         cou = re.findall('[0-9]{1,4}', counts)
         cou = int(cou[0])
-        for i in range(38, cou+1): #start-page to end-page
+        for i in range(1, cou+1): #start-page to end-page
             order = i
             print(order,len(pics))
             url = 'http://jandan.net/ooxx/page-' + str(i) + '#comments'
