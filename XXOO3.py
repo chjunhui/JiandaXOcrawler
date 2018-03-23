@@ -1,6 +1,14 @@
 # -*- coding: utf-8 -*-
 '''
-crawler for jandan.net/ooxx
+multiprocessing crawler for jandan.net/ooxx
+
+"pip install -r requirements.txt" and run it.
+
+The line with notes is position you can control this script.
+
+Have fun.
+
+@author: B1u3Buf4
 '''
 import re
 import time
@@ -35,12 +43,12 @@ def crawlurl():
         counts = re.findall('current-comment-page">.*</s', page)[0]
         cou = re.findall('[0-9]{1,4}', counts)
         cou = int(cou[0])
-        for i in range(46, cou+1): #start-page to end-page
+        for i in range(1, cou + 1): #start-page to end-page
             order = i
-            print(order,len(pics))
+            print(order, len(pics))
             url = 'http://jandan.net/ooxx/page-' + str(i) + '#comments'
             driver.get(url)
-            WebDriverWait(driver,5,0.5).until(checkload(driver))
+            WebDriverWait(driver, 5, 0.5).until(checkload(driver))
             page = driver.find_element_by_id('comments').get_attribute("innerHTML")
             pics.extend(re.findall('(src=".*?jpg|src=".*?gif|src=".*?png)', page))
         for j in pics:
@@ -48,30 +56,30 @@ def crawlurl():
             if 'jandan.net' in url:
                 continue
             if url.find('http://') != 0:
-                print('[-]',url)
+                print('[-]', url)
                 continue
             urls.append(url)
         return urls
     finally:
-        print('[+]',order,len(urls))
+        print('[+]', order, len(urls))
         driver.quit()
 
 
 def tinyreq(url):
     r = requests.get(url)
     name1 = re.findall('([a-zA-Z0-9]*?.jpg|[a-zA-Z0-9]*?.gif|[a-zA-Z0-9]*?.png)', url[-36:])
-    print('Downloading',url)
-    with open('./pics/'+name1[0], "wb") as code:
+    print('Downloading', url)
+    with open('./pics/' + name1[0], "wb") as code:
         try:
             code.write(r.content)
         except:
             pass
 
 
-def getpic(imgs):
-    pool = Pool(5)
+def getpic(imgs, processes = 5): #number of processes
+    pool = Pool(processes)
     for img in imgs:
-        pool.apply_async(tinyreq,(img, ))
+        pool.apply_async(tinyreq, (img, ))
     pool.close()
     pool.join()
 
