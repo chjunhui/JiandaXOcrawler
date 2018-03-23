@@ -7,11 +7,11 @@ Crawler for jiandan.net/xxoo girl's pics. Friendly and for fun.
 
 python2使用phantomJS；python3使用headless Chrome。
 
-煎蛋妹子图爬虫。友好地单线程和请求延迟。项目只是为了好玩。
+煎蛋妹子图爬虫。~~友好地单线程和请求延迟~~。项目只是为了好玩。
+
+已经改为暴力的多线程。
 
 喜欢请Star。
-
-Plz star，if U like.
 
 ## Usage ##
 
@@ -23,8 +23,7 @@ rely on **selenium**、**requests**
 
 Install comment dependent modules:
 
-    pip install selenium
-	pip install requests
+    pip install -r requirements.txt
 
 ### Difference: ###
 
@@ -65,3 +64,7 @@ The jiandan.net/xxooo web server could check **User-Agent** in your request head
 3月6日：添加python3代码，python2不再更新；python3使用Headless Chrome；python3代码中调整采集策略；细节修改。
 
 3/6: Added python3 code, python2 code would not upgrade anymore; Used the Headless Chrome replace phantomJS in python3 code; Changed crawling strategy in python3 code; Some details modified.
+
+3月24日：因为现在煎蛋妹子图没有那么多了，干脆暴力一点，使用了`multiprocessing`。
+
+3/24: Use `multiprocessing` to make script more powerful.
