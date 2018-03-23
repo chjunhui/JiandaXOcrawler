@@ -10,6 +10,7 @@ Have fun.
 
 @author: B1u3Buf4
 '''
+import os
 import re
 import time
 from multiprocessing import Process, Queue, Pool
@@ -85,7 +86,9 @@ def getpic(imgs, processes = 5): #number of processes
 
 
 if __name__ == "__main__":
+    if not os.path.exists('./pics/'):
+        os.mkdir('pics')
     start_time = time.time()
     pic = crawlurl()
     getpic(pic)
-    print('[+] total:%sS' % (time.time() - start_time))
+    print('[+] total:%s S' % (int(time.time() - start_time)))
