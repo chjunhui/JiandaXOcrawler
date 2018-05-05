@@ -1,4 +1,4 @@
-# jiandan.net/xxoo crawler
+# jiandan.net/xxoo crawler #
 
 ![work with](https://img.shields.io/badge/python-2.X-red.svg)
 ![work with](https://img.shields.io/badge/python-3.X-green.svg)
@@ -45,13 +45,17 @@ The **py3-script** uses a Headless Chrome method, so type `chrome://version/` in
     Chrome(Windows) >= 60.x
     Chrome(Linux) >= 59.x
 
-## By the way
+## By the way ##
+
+图片去重的demo在我的[另一个仓库](https://github.com/B1u3Buf4/de-duplication)里。
+
+挖一个坑：准备挖一下微博相册上的老司机，在[这个仓库](https://github.com/B1u3Buf4/WeiboDriver)中。
 
 The jiandan.net/xxooo web server could check **User-Agent** in your request header, but it only checks whether it has the tag or not.
 
 ~~Owing to the script automatically can hide bad content, pics you get are not whole.~~
 
-## Change logs
+## Change logs ##
 
 2月5日：更新之后默认爬取所有图片，包括折叠内容。
 
@@ -61,7 +65,7 @@ The jiandan.net/xxooo web server could check **User-Agent** in your request head
 
 2/20：The Web browser had changed from chrome to phantomJS and added it in the project. Improved performance.
 
-3月6日：添加python3代码，python2不再更新；python3使用Headless Chrome；python3代码中调整采集策略；细节修改。
+3月6日：添加python3代码，python2不再更新；python3使用Headless Chrome替代phantomJS；python3代码中调整采集策略；细节修改。
 
 3/6: Added python3 code, python2 code would not upgrade anymore; Used the Headless Chrome replace phantomJS in python3 code; Changed crawling strategy in python3 code; Some details modified.
 
