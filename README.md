@@ -9,11 +9,29 @@ python2使用phantomJS；python3使用headless Chrome。
 
 煎蛋妹子图爬虫。~~友好地单线程和请求延迟~~。项目只是为了好玩。
 
-已经改为暴力的多线程。改进了策略，采用先采集后下载的策略。考虑图片越来越少，没有再加进度保存的功能，但可以通过手动修改`start-page`指定开始位置。
+已经改为暴力的多线程。根据网络质量慎重并发量，否则可能下载出错。调整改进了策略，采用先采集后下载的策略。考虑图片越来越少，没有再加进度保存的功能，但可以通过手动修改`start-page`指定开始位置。
 
-喜欢请Star。
+好用请Star。
 
-## Usage ##
+## No-dependence script Usage ##
+
+不依赖浏览器版的煎蛋妹子图爬虫，实现了同解密的JS一样的算法，目前可用。单线程。
+
+before using:
+
+    pip install requests
+
+（windows, py2）
+
+Change CMD to `NoDependence`, then type `python xxoonodep.py` or `python xxoonodep.py start-page end-page`. Caution: make sure start-page always end-page
+
+切换到`NoDependence`目录下，`python xxoonodep.py`默认从头开始爬取所有的内容，`python xxoonodep.py start-page end-page`选择性地爬取内容。注意输入。如果输入的结束位置大于现实值，可能导致为止的问题，暂时无测试和应对。
+
+Warning:
+
+CDN Cache(I guess) may make the script get a non-existent JS file and make it break. If so, wait for some time and retry it.
+
+## script with browser Usage ##
 
 ### Comment setp: ###
 
@@ -45,7 +63,7 @@ The **py3-script** uses a Headless Chrome method, so type `chrome://version/` in
     Chrome(Windows) >= 60.x
     Chrome(Linux) >= 59.x
 
-## By the way ##
+## BTW ##
 
 图片去重的demo在我的[另一个仓库](https://github.com/B1u3Buf4/de-duplication)里。
 
@@ -69,6 +87,10 @@ The jiandan.net/xxooo web server could check **User-Agent** in your request head
 
 3/6: Added python3 code, python2 code would not upgrade anymore; Used the Headless Chrome replace phantomJS in python3 code; Changed crawling strategy in python3 code; Some details modified.
 
-3月24日：因为现在煎蛋妹子图没有那么多了，干脆暴力一点，使用了`multiprocessing`。
+3月24日：因为现在煎蛋妹子图没有那么多了，干脆暴力一点，在微博取图的阶段使用了`multiprocessing`。
 
 3/24: Use `multiprocessing` to make script more powerful.
+
+5月16日：逆向解密的JS并完成了这个JS解密的python脚本。
+
+5/16: Analyze the crypto algorithm in JS and use python achieve so.
