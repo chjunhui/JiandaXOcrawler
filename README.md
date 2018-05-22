@@ -9,13 +9,19 @@ python2使用phantomJS；python3使用headless Chrome。
 
 煎蛋妹子图爬虫。~~友好地单线程和请求延迟~~。项目只是为了好玩。
 
-已经改为暴力的多线程。根据网络质量慎重并发量，否则可能下载出错。调整改进了策略，采用先采集后下载的策略。考虑图片越来越少，没有再加进度保存的功能，但可以通过手动修改`start-page`指定开始位置。
+已经改为暴力的多线程。根据网络质量慎重并发量，否则可能下载出错。调整改进了策略，采用先采集后下载的策略。考虑图片越来越少，没有再加进度保存的功能，~~但可以通过手动修改`start-page`指定开始位置。~~
 
-好用请Star。
+**好用请Star。**
+
+## 伸手党
+
+可以直接用请求器（本仓库不含）读取`NoDependence`下的`allurls.txt`文件，注意去掉每行最后的`'\n'`。
+
+不保证是最新的内容，因为不会每天都爬，记录的是测试时的访问。
 
 ## No-dependence script Usage ##
 
-不依赖浏览器版的煎蛋妹子图爬虫，实现了同解密的JS一样的算法，目前可用。单线程，保持5秒一次的友好请求。
+不依赖浏览器版的煎蛋妹子图爬虫，实现了同解密的JS一样的算法，目前可用。单线程，保持5秒一次的友好请求。通过日志来跳过已经下载的图片。
 
 before using:
 
@@ -31,7 +37,7 @@ Warning:
 
 CDN Cache(I guess) may make the script get a non-existent JS file and make it break. If so, wait for some time and retry it.
 
-## script with browser Usage ##
+## The script wokring with browser Usage ##
 
 ### Comment setp: ###
 
@@ -95,6 +101,6 @@ The jiandan.net/xxooo web server could check **User-Agent** in your request head
 
 5/16: Analyze the crypto algorithm in JS and use python achieve so.
 
-5月21日：应对改版重写了脚本。
+5月21日：应对改版重写了脚本。（Knick your ass.）
 
 5/22: Rewrite the code owing to HTML changed.
