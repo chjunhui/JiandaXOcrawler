@@ -15,13 +15,13 @@ python2使用phantomJS；python3使用headless Chrome。
 
 ## No-dependence script Usage ##
 
-不依赖浏览器版的煎蛋妹子图爬虫，实现了同解密的JS一样的算法，目前可用。单线程。
+不依赖浏览器版的煎蛋妹子图爬虫，实现了同解密的JS一样的算法，目前可用。单线程，保持5秒一次的友好请求。
 
 before using:
 
     pip install requests
 
-（windows, py2）
+（Test env: Windows, py2）
 
 Change CMD to `NoDependence`, then type `python xxoonodep.py` or `python xxoonodep.py start-page end-page`. Caution: make sure start-page always end-page
 
@@ -94,3 +94,7 @@ The jiandan.net/xxooo web server could check **User-Agent** in your request head
 5月16日：逆向解密的JS并完成了这个JS解密的python脚本。
 
 5/16: Analyze the crypto algorithm in JS and use python achieve so.
+
+5月21日：应对改版重写了脚本。
+
+5/22: Rewrite the code owing to HTML changed.
