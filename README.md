@@ -1,7 +1,8 @@
 # jiandan.net/xxoo crawler #
 
-![work with](https://img.shields.io/badge/python-2.X-red.svg)
-![work with](https://img.shields.io/badge/python-3.X-green.svg)
+![work with](https://img.shields.io/badge/py2-NoBrowser-green.svg)
+![work with](https://img.shields.io/badge/py3-Browser&Selenium-blue.svg)
+![work with](https://img.shields.io/badge/py2-Browser&Selenium-red.svg)
 
 Crawler for jiandan.net/xxoo girl's pics. Friendly and for fun.
 
@@ -9,7 +10,7 @@ python2使用phantomJS；python3使用headless Chrome。
 
 煎蛋妹子图爬虫。~~友好地单线程和请求延迟~~。项目只是为了好玩。
 
-已经改为暴力的多线程。根据网络质量慎重并发量，否则可能下载出错。调整改进了策略，采用先采集后下载的策略。考虑图片越来越少，没有再加进度保存的功能，~~但可以通过手动修改`start-page`指定开始位置。~~
+多线程需要根据网络质量慎重选择并发量，否则可能下载出错。调整改进了策略，采用先采集后下载的策略。考虑图片越来越少，没有再加进度保存的功能，~~但可以通过手动修改`start-page`指定开始位置。~~
 
 **好用请Star。**
 
@@ -19,7 +20,7 @@ python2使用phantomJS；python3使用headless Chrome。
 
 不保证是最新的内容，因为不会每天都爬，记录的是测试时的访问。
 
-## No-dependence script Usage ##
+## NoBrowser script Usage ##
 
 不依赖浏览器版的煎蛋妹子图爬虫，实现了同解密的JS一样的算法，目前可用。单线程，保持5秒一次的友好请求。通过日志来跳过已经下载的图片。
 
@@ -103,4 +104,8 @@ The jiandan.net/xxooo web server could check **User-Agent** in your request head
 
 5月21日：应对改版重写了脚本。（Knick your ass.）
 
-5/22: Rewrite the code owing to HTML changed.
+5/21: Rewrite the code owing to HTML changed.
+
+5月25日：粗略计算总页数并优化了间隔时间。
+
+5/25: Roughly, calculate a total number of pages. Delay time is optimised.
