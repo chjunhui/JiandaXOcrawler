@@ -8,11 +8,17 @@ Crawler for jiandan.net/xxoo girl's pics. Friendly and for fun.
 
 python2使用phantomJS；python3使用headless Chrome。
 
-煎蛋妹子图爬虫。~~友好地单线程和请求延迟~~。项目只是为了好玩。
+煎蛋妹子图爬虫。友好地单线程和请求延迟。项目只是为了好玩。
 
-多线程需要根据网络质量慎重选择并发量，否则可能下载出错。调整改进了策略，采用先采集后下载的策略。考虑图片越来越少，没有再加进度保存的功能，~~但可以通过手动修改`start-page`指定开始位置。~~
+推荐使用无浏览器版本（NoBrowser script），保持对煎蛋robots.txt的尊重，间隔时间会要求在大于等于5秒的范围内。
+
+~~多线程需要根据网络质量慎重选择并发量，否则可能下载出错。调整改进了策略，采用先采集后下载的策略。考虑图片越来越少，没有再加进度保存的功能，但可以通过手动修改`start-page`指定开始位置。~~
 
 **好用请Star。**
+
+## ToDo
+
+暂时没有
 
 ## 伸手党
 
@@ -56,7 +62,7 @@ If you use py2: just run `XXOO2.py` in `./old/`.
 
 If you use py3, you need to install additional tools:
 > Chrome
-> 
+>
 > [chromedriver.exe](http://chromedriver.storage.googleapis.com/)
 
 [chromedriver mirror in Alibaba](http://npm.taobao.org/mirrors/chromedriver/)
@@ -109,3 +115,7 @@ The jiandan.net/xxooo web server could check **User-Agent** in your request head
 5月25日：粗略计算总页数并优化了间隔时间。
 
 5/25: Roughly, calculate a total number of pages. Delay time is optimised.
+
+6月22日：不依赖浏览器的版本从python2升级到了python3。基于文件二进制内容的哈希值计算值的去重。间接地避免基于图片名称去重时，被和谐的图片再次采集时会覆盖同名文件。
+
+6/22:  The no-browser script has changed from python2 to python3.
