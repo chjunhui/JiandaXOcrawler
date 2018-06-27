@@ -34,7 +34,7 @@ before using:
 
     pip install requests
 
-（Test env: Windows, py2）
+（Test env: Windows, python3）
 
 Change CMD to `NoDependence`, then type `python xxoonodep.py` or `python xxoonodep.py start-page end-page`. Caution: make sure start-page always end-page
 
