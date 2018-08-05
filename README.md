@@ -119,3 +119,5 @@ The jiandan.net/xxooo web server could check **User-Agent** in your request head
 6月22日：不依赖浏览器的版本从python2升级到了python3。基于文件二进制内容的哈希值计算值的去重。间接地避免基于图片名称去重时，被和谐的图片再次采集时会覆盖同名文件。
 
 6/22:  The no-browser script has changed from python2 to python3.
+
+8/6: When the picture is deleted, it will show same another one. So I get its hash in case it rewrites the former picture.

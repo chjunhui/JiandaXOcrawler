@@ -15,7 +15,15 @@ import os
 import time
 
 
+def none_md5():
+    with open('None.jpg','rb') as f:
+        res = hashlib.md5(f.read()).hexdigest()
+    return res
+
 def FirstReq():
+    nonemd5 = none_md5()
+    print(nonemd5)
+    nonemd5 = '9fb3b83b96c82eb08412279e4c0fa539'
     try:
         headers = {"User-Agent":"Mozilla/5.0 (Windows NT 10.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36"}
         with open('hash.txt', 'r') as log:
@@ -33,6 +41,9 @@ def FirstReq():
                 tmp = 'http:' + tmp
                 rr = requests.get(tmp, headers = headers)
                 tmphash = hashlib.md5(rr.content).hexdigest()
+                if tmphash is nonemd5:
+                    print('[x]', tmp)
+                    continue
                 if tmphash + '\n' not in allurls:
                     print('[+]', tmp)
                     with open('./pics/' + tmp[tmp.rfind('/') + 1:], 'wb') as f:
