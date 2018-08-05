@@ -21,8 +21,9 @@ def none_md5():
     return res
 
 def FirstReq():
-    nonemd5 = none_md5()
-    print(nonemd5)
+    #nonemd5 = none_md5()
+    #print(nonemd5)
+    #When the pic is deleted, it will show same anothor one. So I get its hash in case rewrite the former pic. 
     nonemd5 = '9fb3b83b96c82eb08412279e4c0fa539'
     try:
         headers = {"User-Agent":"Mozilla/5.0 (Windows NT 10.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36"}

@@ -120,4 +120,6 @@ The jiandan.net/xxooo web server could check **User-Agent** in your request head
 
 6/22:  The no-browser script has changed from python2 to python3.
 
+8月6日：（中间有些版本更新没有修改readme）计算了被删除的图片返回的相同的“出错图”的md5值，以防发生重写覆盖图片。
+
 8/6: When the picture is deleted, it will show same another one. So I get its hash in case it rewrites the former picture.
