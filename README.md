@@ -4,13 +4,13 @@
 ![work with](https://img.shields.io/badge/py3-Browser&Selenium-blue.svg)
 ![work with](https://img.shields.io/badge/py2-Browser&Selenium-red.svg)
 
-Crawler for jiandan.net/xxoo girl's pics. Friendly and for fun.
-
-python2使用phantomJS；python3使用headless Chrome。
+Spider for jiandan.net/xxoo girl's pics. 
 
 煎蛋妹子图爬虫。友好地单线程和请求延迟。项目只是为了好玩。
 
-推荐使用无浏览器版本（NoBrowser script），保持对煎蛋robots.txt的尊重，间隔时间会要求在大于等于5秒的范围内。
+推荐使用now文件夹下的最新脚本，无浏览器版本（NoBrowser script）或者spider，保持对煎蛋robots.txt的尊重，间隔时间会要求在大于等于5秒的范围内。
+
+~~python2使用phantomJS；python3使用headless Chrome。~~
 
 ~~多线程需要根据网络质量慎重选择并发量，否则可能下载出错。调整改进了策略，采用先采集后下载的策略。考虑图片越来越少，没有再加进度保存的功能，但可以通过手动修改`start-page`指定开始位置。~~
 
@@ -18,13 +18,15 @@ python2使用phantomJS；python3使用headless Chrome。
 
 ## ToDo
 
-暂时没有
+接下来要深挖一下微博的老司机。
 
 ## 伸手党
 
 可以直接用请求器（本仓库不含）读取`NoDependence`下的`allurls.txt`文件，注意去掉每行最后的`'\n'`。
 
-不保证是最新的内容，因为不会每天都爬，记录的是测试时的访问。
+或者直接在迅雷里批量下载。
+
+不保证是最新的内容，因为不会每天都爬，文件记录的只是测试程序功能时的访问记录。
 
 ## NoBrowser script Usage ##
 
@@ -36,13 +38,19 @@ before using:
 
 （Test env: Windows, python3）
 
-Change CMD to `NoDependence`, then type `python xxoonodep.py` or `python xxoonodep.py start-page end-page`. Caution: make sure start-page always end-page
+Change CMD or shell to `./NoDependence`, then type `python xxoonodep.py`. Then fabulous girls' pictures is coming.
 
-切换到`NoDependence`目录下，`python xxoonodep.py`默认从头开始爬取所有的内容，`python xxoonodep.py start-page end-page`选择性地爬取内容。注意输入。如果输入的结束位置大于现实值，可能导致为止的问题，暂时无测试和应对。
+在CMD或者shell中切换到`./NoDependence`目录下，输入`python xxoonodep.py`即可。
 
-Warning:
+## scrapy_spider ##
 
-CDN Cache(I guess) may make the script get a non-existent JS file and make it break. If so, wait for some time and retry it.
+安装了scrapy之后，使用`scrapy startproject ???`创建好新的项目，然后跳过生成爬虫这一步，直接复制文件到项目工程的spider目录下，然后运行即可。
+
+# Warning #
+
+old中的内容最好不要再使用。
+
+You’d better not to run the script in './old'.
 
 ## The script wokring with browser Usage ##
 
@@ -123,3 +131,5 @@ The jiandan.net/xxooo web server could check **User-Agent** in your request head
 8月6日：（中间有些版本更新没有修改readme）计算了被删除的图片返回的相同的“出错图”的md5值，以防发生重写覆盖图片。
 
 8/6: When the picture is deleted, it will show same another one. So I get its hash in case it rewrites the former picture.
+
+8月21日：添加了一个scrapy的spider。更正了仓库主页的Readme。调整了文件结构。
