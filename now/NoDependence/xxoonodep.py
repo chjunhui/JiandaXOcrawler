@@ -26,7 +26,7 @@ def FirstReq():
     #When the pic is deleted, it will show same anothor one. So I get its hash in case rewrite the former pic. 
     nonemd5 = '9fb3b83b96c82eb08412279e4c0fa539'
     try:
-        headers = {"User-Agent":"Mozilla/5.0 (Windows NT 10.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36"}
+        headers = {"User-Agent":"Mozilla/5.0 (Windows NT 10.2; Win64; x64) AppleWebKit/538.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36"}
         with open('hash.txt', 'r') as log:
             allurls = list(set(log.readlines()))
         r = requests.get('http://jandan.net/ooxx/', headers = headers)
